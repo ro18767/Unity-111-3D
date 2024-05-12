@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f67f2bac30f824d4f8270bb8bb0779df
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+AssetOrigin:
+  serializedVersion: 1
+  productId: 164693
+  packageName: Water Float
+  packageVersion: 1.0
+  assetPath: Assets/Water Float/Demo/Standard Assets/Editor/Water/Water4/WaterEditorUtility.cs
+  uploadId: 357156

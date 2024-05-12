@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 26d8bdbc8646bde48b05fbaacaaa6577
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 164693
+  packageName: Water Float
+  packageVersion: 1.0
+  assetPath: Assets/Water Float/Demo/Standard Assets/Effects/TessellationShaders/Materials/TesselatedBumpSpecularDisplacement.mat
+  uploadId: 357156

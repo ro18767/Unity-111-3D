@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 42e7f46d0e5a84171a3909479c1646ba
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 164693
+  packageName: Water Float
+  packageVersion: 1.0
+  assetPath: Assets/Water Float/Demo/Standard Assets/Environment/Water/Water/Scripts/GerstnerDisplace.cs
+  uploadId: 357156

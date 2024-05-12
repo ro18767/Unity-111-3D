@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f9478da7c1b3d6a49a07a049fd8c9763
+timeCreated: 1520263292
+licenseType: Store
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 164693
+  packageName: Water Float
+  packageVersion: 1.0
+  assetPath: Assets/Water Float/Demo/Standard Assets/Environment/Water/DO_NOT_WORK_IN_VR.txt
+  uploadId: 357156
