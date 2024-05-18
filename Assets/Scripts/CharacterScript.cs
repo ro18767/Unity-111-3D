@@ -5,28 +5,53 @@ using UnityEngine;
 public class CharacterScript : MonoBehaviour
 {
     private CharacterController characterController;
-    private float spead = 30.0f;
+    private float speed = 3f;
+
+    private Animator animator;
+
 
     void Start()
     {
+        animator = GetComponent<Animator>();
         characterController = GetComponent<CharacterController>();
     }
 
     void Update()
     {
-        float dx = Input.GetAxis("Horizontal");
-        float dy = Input.GetAxis("Vertical");
-        if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
-        {
-            dx *= 2;
-            dy *= 2;
-        }
+       int moveState = 0;
+        float dx = Input.GetAxis("Horizontal") * speed;
+        float dy = Input.GetAxis("Vertical") * speed;        
         // new Vector3(dx, 0, dy) - по Світових координатах: Х - завжди по "клітинках"
         // вимагається - рух у відповідності до повороту камери
         // осі камери задаються векторами forward та right
-        characterController.SimpleMove(
-            Camera.main.transform.forward * spead * dy +
-            Camera.main.transform.right * spead * dx);
+        Vector3 step =
+            Camera.main.transform.forward * dy +
+            Camera.main.transform.right * dx;
+        if(step.magnitude < 0.01f)
+        {
+            moveState = 0;
+        }
+        else if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
+        {
+            step *= 2f;
+            moveState = 2;  // RunForward
+
+            if (dx > 0.4f)
+            {
+                moveState = 5;  // RunRight
+            }
+            if (dx < -0.4f)
+            {
+                moveState = 4;  // Runleft
+            }
+
+        }
+        else
+        {
+            moveState = 1;
+        }
+        characterController.SimpleMove(step);
+        animator.SetInteger("State", moveState);
 
         // повертаємо персонаж поглядом у напрямі камери
         Vector3 f = Camera.main.transform.forward;  // вектор камери може бути нахиленим
